@@ -1,0 +1,139 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Login Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0f0c29;  /* Dark gradient background */
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login Container */
+        .login-card {
+            background: rgba(255, 255, 255, 0.05); /* Transparent white */
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* Blur effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        /* Input Styles */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            color: #bbb;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+
+        /* Button Style */
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #00d2ff;
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #00d2ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>LOGIN</h2>
+        <form action="#">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="footer-links">
+            <a href="#">Forgot Password?</a><br><br>
+            <a href="#">Don't have an account? Register</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+{% endblock %}
