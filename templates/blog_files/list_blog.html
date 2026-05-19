@@ -1,0 +1,19 @@
+
+{% extends 'blog_files/base.html' %}
+
+{% block title %} About | Blog App {% endblock %}
+
+{% block content %} 
+
+{% for x in data %}
+<a href="/display/{{x.id}}">
+    {{    x.id   }}
+    {{    x.title   }}
+    {{    x.description  }}
+    <br><br>
+</a>
+{%     endfor   %}
+
+
+This Is The list_students Page For My Blog Website.
+ {% endblock %}
